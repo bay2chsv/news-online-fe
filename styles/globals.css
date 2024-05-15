@@ -1,0 +1,7 @@
+.ck.ck-editor {
+    color: rgb(0, 0, 0); /* Text color in dark mode */
+  }
+  .image img {
+height: 100%;
+width: 100%;
+  }

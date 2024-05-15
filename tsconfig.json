@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/dashboard/Listitems.tsx", "pages/admin/articles/create.tsx", "pages/[category]/[sub]/[id].tsx", "middleware.p", "pages/api/auth/[...nextauth].js", "pages/api/restricted.ts", "pages/auth/reset-password.tsx", "middleware"],
+  "exclude": ["node_modules"]
+}

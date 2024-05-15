@@ -1,0 +1,20 @@
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+
+export function middleware(request: NextRequest) {
+  // Getting cookies from the request using the `RequestCookies` API
+  const accessToken = request.cookies.get("accessToken");
+  const refreshToken = request.cookies.get("refreshToken");
+
+  // Check if the required cookie is present
+  if (!refreshToken || !accessToken) {
+    // Redirect or respond with an error if the cookie is not present
+    return NextResponse.redirect(new URL("/", request.url));
+  }
+  // Continue processing if the cookie is present
+  return NextResponse.next();
+}
+
+export const config = {
+  matcher: "/admin/:path*"
+};
